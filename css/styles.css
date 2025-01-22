@@ -648,13 +648,20 @@ footer .subscribe-button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: var(--navy-blue);
-    transition: background-color 250ms linear, fill 250ms linear;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-modal .cross svg {
+    fill:var(--navy-blue);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-modal .cross:focus,
 .order-modal .cross:hover {
     background-color: var(--ocean);
+}
+.order-modal .cross:focus svg,
+.order-modal .cross:hover svg {
     fill: var(--white);
 }
 
@@ -665,7 +672,13 @@ footer .subscribe-button:focus {
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--navy-blue);
+    margin-bottom: 16px;
 }
+
+.order-modal .super-div {
+    margin-bottom: 8px;
+}
+
 
 .order-modal label {
     font-weight: 400;
@@ -692,7 +705,6 @@ footer .subscribe-button:focus {
 }
 .order-modal .input-wraper {
     position: relative;
-    margin-bottom: 8px;
 }
 .order-modal .input-icon {
     position: absolute;
@@ -703,8 +715,10 @@ footer .subscribe-button:focus {
 .order-modal textarea {
     resize: none;
     min-height: 120px;
+    padding: 8px 16px;
+}
+.order-modal .textarea-div {
     margin-bottom: 16px;
-    padding: 8px;
 }
 
 .order-modal input:focus,
