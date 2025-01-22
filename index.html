@@ -442,7 +442,7 @@
         <p class="text">Leave your contacts and we will call you back</p>
         <form class="order-form">
           <div class="super-div">
-            <label for="user-name">Name</label>
+            <label class="input-text-label" for="user-name">Name</label>
             <div class="input-wraper">
               <input
                 type="text"
@@ -457,7 +457,7 @@
           </div>
 
           <div class="super-div">
-            <label for="user-phone">Phone</label>
+            <label class="input-text-label" for="user-phone">Phone</label>
             <div class="input-wraper">
               <input
                 type="tel"
@@ -472,7 +472,7 @@
           </div>
 
           <div class="super-div">
-            <label for="email">Email</label>
+            <label class="input-text-label" for="email">Email</label>
             <div class="input-wraper">
               <input
                 type="email"
@@ -487,28 +487,31 @@
           </div>
 
           <div class="textarea-div">
-            <label for="comment">Comment</label>
-            <textarea name="order-comment" id="comment"></textarea>
+            <label for="user-comment">Comment</label>
+            <textarea
+              class="textareaaaa"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
           </div>
 
           <div class="privacy-policy">
             <input
               class="visually-hidden"
               type="checkbox"
-              name="privacy_policy_agreement"
+              name="user-privacy"
               id="user-privacy"
               value="true"
             />
-            <label for="user-privacy">
-              <div class="checkbox-wraper">
-                <span class="castom-checkbox">
-                  <svg width="10" height="8">
-                    <use href="./images/icons.svg#icon-checkmark"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the&nbsp;
-                <a href="">Privacy Policy</a>
-              </div>
+            <label class="checkbox-wraper" for="user-privacy">
+              <span class="castom-checkbox">
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-checkmark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;
+              <a href="">Privacy Policy</a>
             </label>
           </div>
           <button class="submit-button" type="submit">Send</button>

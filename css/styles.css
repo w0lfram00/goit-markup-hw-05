@@ -641,9 +641,11 @@ footer .subscribe-button:focus {
     position: absolute;
     background-color: var(--cornflower);
     border-radius: 50%;
-    padding: 8px;
+    padding: 0;
     top: 24px;
     right: 24px;
+    width: 24px;
+    height: 24px;
     outline: transparent;
     display: flex;
     justify-content: center;
@@ -659,6 +661,7 @@ footer .subscribe-button:focus {
 .order-modal .cross:focus,
 .order-modal .cross:hover {
     background-color: var(--ocean);
+    border: none;
 }
 .order-modal .cross:focus svg,
 .order-modal .cross:hover svg {
@@ -687,6 +690,7 @@ footer .subscribe-button:focus {
     letter-spacing: 0.04em;
     color: var(--light-slate);
     margin-bottom: 4px;
+    display: block;
 }
 .order-modal input, .order-modal textarea {
     padding: 11px 38px;
@@ -694,6 +698,8 @@ footer .subscribe-button:focus {
     border-radius: 4px;
     width: 100%;
     outline: transparent;
+    height: 40px;
+    background-color: transparent;
 
     font-weight: 400;
     font-size: 12px;
@@ -701,7 +707,7 @@ footer .subscribe-button:focus {
     letter-spacing: 0.04em;
     color: var(--navy-blue);
 
-    transition: border 250ms linear, fill 250ms linear;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-modal .input-wraper {
     position: relative;
@@ -711,11 +717,15 @@ footer .subscribe-button:focus {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-modal textarea {
     resize: none;
     min-height: 120px;
     padding: 8px 16px;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-modal .textarea-div {
     margin-bottom: 16px;
@@ -729,6 +739,10 @@ footer .subscribe-button:focus {
     fill: var(--iris);
 }
 
+
+.order-modal .privacy-policy {
+    margin-bottom: 24px;
+}
 .order-modal .checkbox-wraper {
     display: flex;
     align-items: center;
@@ -775,10 +789,11 @@ footer .subscribe-button:focus {
 .order-modal .submit-button {
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: var(--iris);
+    display: block;
 
     margin: 0 auto;
     margin-top: 24px;
@@ -790,7 +805,7 @@ footer .subscribe-button:focus {
     letter-spacing: 0.04em;
     color: var(--white);
 
-    transition: background-color 250ms linear;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-modal .submit-button:hover,
 .order-modal .submit-button:focus {
