@@ -528,7 +528,7 @@ footer .subscribe-form {
     margin-left: 80px;
 }
 
-footer .subscribe-wraper {
+footer form {
     display: flex;
     gap: 24px;
 }
