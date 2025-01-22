@@ -526,7 +526,12 @@ footer .socials .icon:focus {
 /* #endregion */
 
 /* #region ==================== OREDER FORM ========================= */
-.order-form .backdash {
+
+
+.order-form svg {
+    display: block;
+}
+.order-form .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -534,12 +539,19 @@ footer .socials .icon:focus {
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     z-index: 100;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .order-form .modal {
     min-width: 408px;
-    height: 90%;
     overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     background-color: var(--white);
     top: 50%;
@@ -562,9 +574,14 @@ footer .socials .icon:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.order-form .cross svg {
     fill: var(--navy-blue);
+    transition: background-color 250ms linear, fill 250ms linear;
+}
+
+.order-form .cross:focus,
+.order-form .cross:hover {
+    background-color: var(--ocean);
+    fill: var(--white);
 }
 
 .order-form p {
@@ -586,15 +603,18 @@ footer .socials .icon:focus {
 }
 .order-form input, .order-form textarea {
     padding: 11px 38px;
-    border: 1px solid var(--iris);
+    border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
     width: 100%;
+    outline: transparent;
 
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
     letter-spacing: 0.04em;
     color: var(--navy-blue);
+
+    transition: border 250ms linear, fill 250ms linear;
 }
 .order-form .input-wraper {
     position: relative;
@@ -610,11 +630,21 @@ footer .socials .icon:focus {
     resize: none;
     min-height: 120px;
     margin-bottom: 16px;
+    padding: 8px;
 }
 
+.order-form input:focus,
+.order-form textarea:focus {
+    border: 1px solid var(--iris);
+}
+.order-form input:focus + .input-icon {
+    fill: var(--iris);
+}
 
-.order-form .privacy-policy {
+.order-form .checkbox-wraper {
     display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 .order-form .privacy-policy label {
     font-weight: 400;
@@ -622,6 +652,7 @@ footer .socials .icon:focus {
     line-height: 117%;
     letter-spacing: 0.04em;
     color: var(--light-slate);
+    margin-bottom: 0;
 }
 .order-form .privacy-policy label a {
     font-weight: inherit;
@@ -632,5 +663,49 @@ footer .socials .icon:focus {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--iris);
+}
+.order-form .castom-checkbox {
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid var(--navy-blue-modal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 3px;
+    margin-right: 8px;
+    fill: transparent;
+}
+.order-form .privacy-policy input:focus + label .castom-checkbox {
+    border-color: var(--ocean);
+}
+
+.order-form .privacy-policy input:checked + label .castom-checkbox {
+    fill: var(--cloud);
+    background-color: var(--ocean);
+    border: 1px solid var(--ocean);
+}
+.order-form .submit-button {
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: var(--iris);
+
+    margin: 0 auto;
+    margin-top: 24px;
+    padding: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: var(--white);
+
+    transition: background-color 250ms linear;
+}
+.order-form .submit-button:hover,
+.order-form .submit-button:focus {
+    background-color: var(--ocean);
 }
 /* #endregion */
