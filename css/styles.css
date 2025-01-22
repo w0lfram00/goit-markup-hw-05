@@ -589,6 +589,10 @@ footer .subscribe-button:hover,
 footer .subscribe-button:focus {
     background-color: var(--ocean);
 }
+
+footer .subscribe-form svg {
+    margin-left: 16px;
+}
 /* #endregion */
 
 /* #region ==================== OREDER FORM ========================= */
@@ -768,6 +772,8 @@ footer .subscribe-button:focus {
 }
 .order-modal .castom-checkbox {
     border-radius: 2px;
+    width: 16px;
+    height: 16px;
     background-color: transparent;
     border: 1px solid var(--navy-blue-modal);
     display: flex;
@@ -776,6 +782,10 @@ footer .subscribe-button:focus {
     padding: 4px 3px;
     margin-right: 8px;
     fill: transparent;
+    display: inline-flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-modal .privacy-policy input:focus + label .castom-checkbox {
     border-color: var(--ocean);
@@ -784,7 +794,7 @@ footer .subscribe-button:focus {
 .order-modal .privacy-policy input:checked + label .castom-checkbox {
     fill: var(--cloud);
     background-color: var(--ocean);
-    border: 1px solid var(--ocean);
+    border: none;
 }
 .order-modal .submit-button {
     border-radius: 4px;
