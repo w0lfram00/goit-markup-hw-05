@@ -411,12 +411,26 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-form">
+          <form class="footer-form">
+            <p>Subscribe</p>
+            <div class="subscribe-wraper">
+              <input type="text" name="email" placeholder="E-mail" />
+              <button class="subscribe-button" type="submit">
+                Subscribe
+                <svg height="24" width="24">
+                  <use href="./images/icons.svg#icon-telegram"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
 
-    <form class="order-form">
-      <div class="backdrop is-open">
-        <div class="modal">
+    <div class="backdrop is-open">
+      <div class="order-modal modal">
+        <form class="order-form">
           <button class="cross" type="button">
             <svg height="8" width="8">
               <use href="./images/icons.svg#icon-close"></use>
@@ -488,8 +502,8 @@
           </div>
 
           <button class="submit-button" type="submit">Send</button>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
   </body>
 </html>

@@ -523,15 +523,78 @@ footer .socials .icon:hover,
 footer .socials .icon:focus {
     background-color: var(--green);
 }
+
+footer .subscribe-form {
+    margin-left: 80px;
+}
+
+footer .subscribe-wraper {
+    display: flex;
+    gap: 24px;
+}
+
+footer .subscribe-form p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+
+    margin-bottom: 16px;
+}
+
+footer .subscribe-button {
+    display: flex;
+
+}
+
+footer .subscribe-form input {
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    padding: 8px 16px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+footer .subscribe-button {
+    background: var(--iris);
+    border-radius: 4px;
+    padding: 8px 24px;
+
+    display: flex;
+    gap: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--white);
+
+    transition: background-color 250ms linear;
+}
+
+footer .subscribe-button:hover,
+footer .subscribe-button:focus {
+    background-color: var(--ocean);
+}
 /* #endregion */
 
 /* #region ==================== OREDER FORM ========================= */
 
 
-.order-form svg {
+.order-modal svg {
     display: block;
 }
-.order-form .backdrop {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -548,7 +611,7 @@ footer .socials .icon:focus {
     pointer-events: auto;
 }
 
-.order-form .modal {
+.order-modal {
     min-width: 408px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -563,7 +626,7 @@ footer .socials .icon:focus {
     flex-direction: column;
 }
 
-.order-form .cross {
+.order-modal .cross {
     position: absolute;
     background-color: var(--cornflower);
     border-radius: 50%;
@@ -578,13 +641,13 @@ footer .socials .icon:focus {
     transition: background-color 250ms linear, fill 250ms linear;
 }
 
-.order-form .cross:focus,
-.order-form .cross:hover {
+.order-modal .cross:focus,
+.order-modal .cross:hover {
     background-color: var(--ocean);
     fill: var(--white);
 }
 
-.order-form p {
+.order-modal p {
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -593,7 +656,7 @@ footer .socials .icon:focus {
     color: var(--navy-blue);
 }
 
-.order-form label {
+.order-modal label {
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
@@ -601,7 +664,7 @@ footer .socials .icon:focus {
     color: var(--light-slate);
     margin-bottom: 4px;
 }
-.order-form input, .order-form textarea {
+.order-modal input, .order-modal textarea {
     padding: 11px 38px;
     border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
@@ -616,37 +679,37 @@ footer .socials .icon:focus {
 
     transition: border 250ms linear, fill 250ms linear;
 }
-.order-form .input-wraper {
+.order-modal .input-wraper {
     position: relative;
     margin-bottom: 8px;
 }
-.order-form .input-icon {
+.order-modal .input-icon {
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
 }
-.order-form textarea {
+.order-modal textarea {
     resize: none;
     min-height: 120px;
     margin-bottom: 16px;
     padding: 8px;
 }
 
-.order-form input:focus,
-.order-form textarea:focus {
+.order-modal input:focus,
+.order-modal textarea:focus {
     border: 1px solid var(--iris);
 }
-.order-form input:focus + .input-icon {
+.order-modal input:focus + .input-icon {
     fill: var(--iris);
 }
 
-.order-form .checkbox-wraper {
+.order-modal .checkbox-wraper {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.order-form .privacy-policy label {
+.order-modal .privacy-policy label {
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
@@ -654,7 +717,7 @@ footer .socials .icon:focus {
     color: var(--light-slate);
     margin-bottom: 0;
 }
-.order-form .privacy-policy label a {
+.order-modal .privacy-policy label a {
     font-weight: inherit;
     font-size: inherit;
     letter-spacing: inherit;
@@ -664,7 +727,7 @@ footer .socials .icon:focus {
     text-decoration-skip-ink: none;
     color: var(--iris);
 }
-.order-form .castom-checkbox {
+.order-modal .castom-checkbox {
     border-radius: 2px;
     background-color: transparent;
     border: 1px solid var(--navy-blue-modal);
@@ -675,16 +738,16 @@ footer .socials .icon:focus {
     margin-right: 8px;
     fill: transparent;
 }
-.order-form .privacy-policy input:focus + label .castom-checkbox {
+.order-modal .privacy-policy input:focus + label .castom-checkbox {
     border-color: var(--ocean);
 }
 
-.order-form .privacy-policy input:checked + label .castom-checkbox {
+.order-modal .privacy-policy input:checked + label .castom-checkbox {
     fill: var(--cloud);
     background-color: var(--ocean);
     border: 1px solid var(--ocean);
 }
-.order-form .submit-button {
+.order-modal .submit-button {
     border-radius: 4px;
     padding: 16px 32px;
     width: 169px;
@@ -704,8 +767,8 @@ footer .socials .icon:focus {
 
     transition: background-color 250ms linear;
 }
-.order-form .submit-button:hover,
-.order-form .submit-button:focus {
+.order-modal .submit-button:hover,
+.order-modal .submit-button:focus {
     background-color: var(--ocean);
 }
 /* #endregion */
