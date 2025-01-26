@@ -747,9 +747,9 @@ footer .subscribe-form svg {
 
 .order-modal .privacy-policy {
     margin-bottom: 24px;
+    display: flex;
 }
 .order-modal .checkbox-wraper {
-    display: flex;
     align-items: center;
     cursor: pointer;
 }
